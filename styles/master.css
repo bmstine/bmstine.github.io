@@ -106,3 +106,11 @@ h2 {
 .list-text {
     line-height: 2.0;
 }
+
+.zoom-img {
+    width: 500px;
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 2%;
+}
