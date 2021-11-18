@@ -1,0 +1,57 @@
+/*Sets the body width to required 1024px, changes the background to a vertical gradient, and centers the website*/
+body {
+    width: 1024px;
+    background-image: linear-gradient(black, white);
+    margin: 0 auto;
+}
+/*Sets the header background to black, text to white, and height to 40px*/
+header {
+    background-color: black;
+    color: white;
+    height: 40px;
+}
+/*Sets the height to 10px, changes the font family to serif, weight to 500, and alligns in the center*/
+header h1 {
+    height: 10px;
+    font-family: serif;
+    font-weight: 500;
+    text-align: center;
+}
+/*Sets the height to 5px, changes the font family to serif, weight to 200, 0.9em reduces font size, and alligns in the center*/
+header h2 {
+    height: 5px;
+    font-family: serif;
+    font-weight: 200;
+    font-size: 0.9em;
+    text-align: center;
+}
+/*Sets my h2 text above main images to hidden to not interfere with the style but allows it to still be read by a computer*/
+.hide {
+	visibility:hidden;
+	height:0;
+}
+/*Sets my text to the right, adds 5px padding, makes background white and text black.*/
+footer {
+    text-align: right;
+    padding: 5px;
+    background-color: white;
+    color: black;
+}
+/*Floats my images to left when possible with set size*/
+img {
+    float: left;
+}
+/*Sets the margin of figure to 0 to use all space*/
+figure {
+    margin: 0px;
+}
+/*Creates a border inside the image in a white transparent color*/
+.white {
+    outline: 4px solid rgba(255, 255, 255, 0.707);
+    outline-offset: -8px;
+}
+/*Creates a border inside the image in a black transparent color*/
+.black {
+    outline: 4px solid rgba(0, 0, 0, 0.707);
+    outline-offset: -8px;
+}
