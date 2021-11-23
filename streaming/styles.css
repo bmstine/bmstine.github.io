@@ -1,0 +1,159 @@
+html {
+    background-image: linear-gradient(rgb(13, 13, 13), rgb(0, 0, 0));
+    color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    min-width: 760px;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: rgb(0, 0, 0);
+}
+
+#more {
+    padding: 0px 15px 10px 15px;
+}
+
+#more h2 {
+    visibility:hidden;
+    height:0;
+    margin: 0;
+}
+
+#more img {
+    width: 100%;
+}
+
+footer {
+    display: flex;
+    background-color: rgb(0, 0, 0);
+    padding: 20px;
+}
+
+header {
+    background-color: rgb(13, 13, 13);
+}
+
+header img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+    height: auto;
+}
+
+a:visited {
+    color: rgb(255, 255, 255);
+}
+
+nav a:link {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.1em;
+    font-weight: 800;
+}
+
+ul {
+    list-style-type: none;
+    text-align: right;
+    padding: 0px 10px 15px 0px;
+}
+
+h1 {
+    visibility:hidden;
+	height:0;
+    margin: 5px; 
+}
+
+* {
+    box-sizing: border-box;
+}
+  
+.row {
+    display: flex;
+}
+  
+.column {
+    flex: 33.33%;
+    position: relative;
+}
+
+.column:hover .overlay {
+    opacity: 1;
+  }
+
+.overlay {
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1; 
+    width: 100%;
+    transition: .20s ease;
+    opacity:0;
+    color: white;
+    font-size: 0.9em;
+    padding: 10px;
+    text-align: center;
+    position: absolute; 
+    bottom: 5px; 
+  }
+  
+  
+figure {
+    margin: 5px;
+}
+
+#featured {
+    padding: 5px 20px 20px 20px;
+    display: flex;
+}
+
+.featured-description {
+    padding: 5px 20px 20px 20px;
+    align-self: flex-end;
+}
+
+.featured-description a:link {
+    color: black;
+    text-decoration: underline;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+p a:link {
+    text-decoration: underline;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.featured-description h2 {
+    text-align: justify;
+    color: rgb(140, 140, 140);
+    font-weight: 700;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 1px;
+}
+
+.featured-description h3 {
+    text-align: justify;
+    color: rgb(230, 230, 230);
+    font-weight: 700;
+    font-size: 2em;
+    text-transform: capitalize;
+    margin: 0;
+}
+
+.topten {
+    text-align: center;
+    color: rgb(230, 230, 230);
+    font-weight: 700;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    margin: 0;
+    padding-bottom: 10px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 1px;
+}
+
