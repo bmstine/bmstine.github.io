@@ -1,0 +1,257 @@
+/*Gloabal Styles*/
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    max-width: 1024px;
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+}
+
+footer {
+    display: flex;
+    padding: 20px;
+}
+
+header img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+    height: auto;
+    padding-bottom: 5px;
+}
+
+nav {
+    width: 100%;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: auto;
+    padding: 0;
+    overflow: hidden;
+    text-transform: uppercase;
+    display: inline-block;
+}
+  
+nav li {
+    float: left;
+}
+  
+nav li a {
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+nav li a:hover:not(.active) {
+    color: rgb(102, 26, 0);
+}
+  
+nav li a.active {
+    font-weight: 600;
+    text-decoration: overline;
+}
+
+h1 {
+    background-color: rgb(179, 0, 0);
+    color: white;
+    padding: 10px;
+    text-transform: capitalize;
+    font-size: 2.1em;
+    font-weight: 700;
+    margin: 0px 0px 6px 0px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+#background {
+    background-color: rgb(242, 242, 242);
+    padding: 10px;
+}
+
+header h2 {
+    text-transform: lowercase;
+    margin: 0;
+    padding-top: 2px;
+    font-size: 1.2em;
+    text-align: center;
+    font-weight: 300;
+    font-style: italic;
+    color: rgb(77, 77, 77);
+}
+
+main h2 {
+    border-bottom: 1px solid rgb(217, 217, 217);
+    color: rgb(153, 0, 0);
+    padding-top: 10px;
+}
+
+#food {
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    padding: 10px;
+}
+
+#intro p {
+    font-size: 1.1em;
+    font-weight: 300;
+}
+
+#ingredients li {
+    list-style-type: none;
+    padding: 3px;
+}
+
+input {
+    width:14px;
+    height:14px;
+}
+
+#directions li {
+    font-size: 1.1em;
+    font-weight: 300;
+    padding: 10px;
+}
+
+#details ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+#details li {
+    display: inline;
+    padding: 2px 6px 0px 0px;
+    
+}
+
+#equipment ul {
+    font-size: 1.1em;
+    font-weight: 300;
+    list-style-type: circle;
+}
+
+#equipment li {
+    margin: 8px;
+}
+
+.btn {
+    background-color: rgb(153, 0, 0);
+    border-radius: 10%;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.1em;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+
+
+/*Breakpoint Tablet*/
+@media only screen and (max-width: 768px) {
+    main {
+        margin: 15px;
+    }
+
+    header img {
+        width: 450px;
+        padding-bottom: 30px;
+    }
+
+    #food {
+        width: 400px;
+        height: 400px;
+        padding: 10px;
+    }
+
+    h1 {
+        padding: 20px;
+        font-size: 1.5em;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+
+    nav li {
+        font-size: 1.4em;
+    }
+  }
+
+/*Breakpoint Mobile*/
+@media only screen and (max-width: 600px) {
+    
+    main {
+        margin: 10px;
+    }
+
+    header img {
+        width: 300px;
+        padding-bottom: 30px;
+    }
+
+    h1 {
+        padding: 6px;
+        font-size: 1.4em;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+
+    #food {
+        width: 300px;
+        height: 300px;
+        padding: 10px;
+    }
+
+    nav li {
+        font-size: 0.8em;
+    }
+
+    #details li {
+        display: list-item;
+        padding: 2px 6px 0px 0px;
+        text-align: left;
+        
+    }
+  }
+
+/*Print*/
+
+@media print {
+    main {
+        font-size: 1em;
+    }
+
+    header img {
+        padding-bottom: 0px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .btn {
+        display: none;
+    }
+
+    input[type="checkbox"] {
+        display: none;
+    }
+
+    #ingredients li {
+        list-style-type: square;
+        padding: 3px;
+    }
+
+    @page {margin: 0.25in}
+
+}
