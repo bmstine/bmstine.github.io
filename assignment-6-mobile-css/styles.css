@@ -1,0 +1,278 @@
+/*CSS Reset by meyerweb.com*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*Global Styles*/
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+header img {
+    height: 35px;
+    float: left;
+    position: relative;
+    margin: 0.5em 0.5em 0.5em 1em;
+    
+}
+
+header h1 {
+    visibility:hidden;
+    height:0;
+    margin: 0;
+}
+
+header {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #031964;
+}
+
+nav li {
+  float: left;
+}
+
+nav li a {
+  display: block;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+nav li a.active {
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.home-image {
+    width: 100%;
+    height: auto;
+}
+
+hr.line {
+    border-top: 0.5px;
+    border-style: solid;
+    color: rgb(231, 231, 231);
+    margin: 1em;
+}
+
+footer {
+    background-color: rgb(129, 146, 150);
+    padding: 2em;
+    margin-top: 2em;
+}
+
+footer a {
+    color: rgb(255, 255, 255);
+}
+
+footer a:visited {
+    color: rgb(255, 255, 255);
+}
+
+footer li {
+    padding: 0.2em;
+}
+
+small {
+    color: rgb(177, 177, 177);
+}
+
+/*Mobile Styles*/
+@media screen and (max-width: 812px) {
+
+    nav li a {
+        font-size: 1em;
+        padding: 0.9em;
+      }
+
+    h2 {
+        font-size: 1.8em;
+        font-weight: 900;
+        text-align: center;
+        padding: 1em 0em 0.5em 0em;
+    }
+
+    #whats-in {
+        margin: 0.8em;
+    }
+
+    #whats-in img {
+        border: 2px;
+        border-style: solid;
+        color: rgb(92, 92, 92);
+        width: 90%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 2%;
+    }
+
+    #whats-in figcaption {
+        font-size: 1.2em;
+        text-align: center;
+        padding: 1em 0em 2em 0em;
+        line-height: 1.1;
+    }
+
+    blockquote {
+        font-size: 1.5em;
+        padding: 1em 0.8em 2em 0.8em;
+    }
+
+    .name {
+        font-weight: 800;
+        float: right;
+        padding: 1em 0em 2em 0em;
+    }
+
+
+    p {
+        font-size: 1.3em;
+        padding: 1em 1em 2em 1em;
+        line-height: 1.3;
+    }
+
+    .cabin-info {
+        text-align: left;
+        padding-left: 0.8em;
+    }
+
+    h3 {
+        font-size: 1.7em;
+        font-weight: 500;
+        text-align: center;
+        padding: 0.3em 0em 0.3em 0em;
+        text-transform: uppercase;
+    }
+
+    .cabins li{
+        font-size: 1.2em;
+        padding: 0.2em 0.8em 0.2em 0.8em;
+        line-height: 1.1;
+    }
+
+    .cabins img {
+        width: 90%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0.6em 0em 0.6em 0em;
+    }
+
+    .cabins a {
+        display: block;
+        width: 17em;
+        color: rgb(255, 255, 255);
+        background-color: rgb(192, 4, 4);
+        text-align: center;
+        padding: 1.2em;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 0.9em;
+        margin: 1em 0em 4em 0em;
+    }
+
+    form {
+        padding: 2em;
+    }
+
+    label {
+        font-size: 1.1em;
+        padding: 1em 0em 0.5em 0em;
+    }
+
+    input[type=text] {
+        width: 100%;
+        padding: 1em;
+        margin: 0.5em 0em 0.5em 0em;
+        box-sizing: border-box;
+    }
+
+    textarea {
+        width: 100%;
+        height: 20em;
+        padding: 1em;
+        margin: 0.5em 0em 0em 0em;
+        box-sizing: border-box;
+        font-size: 1.1em;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    input[type=submit] {
+        display: block;
+        width: 17em;
+        color: rgb(255, 255, 255);
+        background-color: rgb(192, 4, 4);
+        text-align: center;
+        padding: 1.2em;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 0.9em;
+        margin: 1em 0em 4em 0em;
+    }
+
+    .our-info li {
+        font-size: 1.2em;
+        padding: 0.2em 1.2em 0.2em 1.2em;
+        line-height: 1.1;
+    }
+
+    strong {
+        font-weight: 700;
+    }
+}
