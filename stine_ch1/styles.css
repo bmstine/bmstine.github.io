@@ -1,0 +1,13 @@
+/* Global Styles */
+
+html {
+    width: 760px;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    color: rgb(109, 8, 8);
+    text-decoration: none;
+  }
+  
