@@ -48,6 +48,57 @@
 
         </section>
 
+        <!--Section for Assignment 2, GIT417-->
+        <section>
+            <h2>Calculate Your Subscription Costs!</h2>
+
+            <p>Enter 0 if you do not pay for one in the list below.</p>
+            <!--This input textbox hold value for netflix-->
+            Netflix:
+            <input type="text" id="netflix" name="text1">
+            <!--This input textbox hold value for discover-->
+            Discover:
+            <input type="text" id="discover" name="text2">
+            <!--This input textbox hold value for apple-->
+            Apple:
+            <input type="text" id="apple" name="text3">
+            <!--This input textbox hold value for youtube-->
+            YouTube:
+            <input type="text" id="youtube" name="text4">
+            <!--This input textbox hold value for hulu-->
+            Hulu:
+            <input type="text" id="hulu" name="text5">
+            <!--This input textbox hold value for the total results-->
+            Total Cost:
+            <input type="text" id="total" name="text6">
+            <!--When clicked, this button calls the add() function-->
+            <input type="button" name="btn" value="Display Result" onclick="add()">
+
+        <script type="text/javascript">
+            function add() {
+            //Variable assigned to hold Netflix subscription cost
+            var netflix_cost = parseInt(document.getElementById("netflix").value);
+            //Variable assigned to hold Discover subscription cost
+            var discover_cost = parseInt(document.getElementById("discover").value);
+            //Variable assigned to hold Apple subscription cost
+            var apple_cost = parseInt(document.getElementById("apple").value);
+            //Variable assigned to hold YouTube subscription cost
+            var youtube_cost = parseInt(document.getElementById("youtube").value);
+            //Variable assigned to hold Hulu subscription cost
+            var hulu_cost = parseInt(document.getElementById("hulu").value);
+            //Calculates total values of all user entered subscription costs
+            var result = netflix_cost + discover_cost + apple_cost + youtube_cost + hulu_cost;
+            //Displays the result
+            document.getElementById("total").value = result;
+        }
+        </script>
+        <!--
+                GIT 417: Java Calculation for Assignment 2
+                Author: Bruce Stine
+                Date: 3/24/2022
+        -->
+        </section>
+
         <footer>
 
             <ul>
