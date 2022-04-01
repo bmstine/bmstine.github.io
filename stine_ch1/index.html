@@ -52,27 +52,28 @@
         <section>
             <h2>Calculate Your Subscription Costs!</h2>
 
-            <p>Enter 0 if you do not pay for one in the list below.</p>
             <!--This input textbox hold value for netflix-->
             Netflix:
-            <input type="text" id="netflix" name="text1">
+            <input type="text" id="netflix" name="text1" value="0">
             <!--This input textbox hold value for discover-->
             Discover:
-            <input type="text" id="discover" name="text2">
+            <input type="text" id="discover" name="text2" value="0">
             <!--This input textbox hold value for apple-->
             Apple:
-            <input type="text" id="apple" name="text3">
+            <input type="text" id="apple" name="text3" value="0">
             <!--This input textbox hold value for youtube-->
             YouTube:
-            <input type="text" id="youtube" name="text4">
+            <input type="text" id="youtube" name="text4" value="0">
             <!--This input textbox hold value for hulu-->
             Hulu:
-            <input type="text" id="hulu" name="text5">
+            <input type="text" id="hulu" name="text5" value="0">
             <!--This input textbox hold value for the total results-->
             Total Cost:
             <input type="text" id="total" name="text6">
             <!--When clicked, this button calls the add() function-->
             <input type="button" name="btn" value="Display Result" onclick="add()">
+            
+            <p id="msg"></p>
 
         <script type="text/javascript">
             function add() {
@@ -90,6 +91,27 @@
             var result = netflix_cost + discover_cost + apple_cost + youtube_cost + hulu_cost;
             //Displays the result
             document.getElementById("total").value = result;
+            
+            /*
+                GIT 417: if/else statement for Assignment 3
+                Author: Bruce Stine
+                Date: 4/1/2022
+            */
+
+            //This if/else statement displays a message depending on the total of your subscriptions.
+            let message;
+            //If your total is less than 1, display You need some subscriptions!
+            if (result < 1) {
+            message = "You need some subscriptions!";
+            //If your total is less than 49, display You keep your subscriptions simple!
+            } else if (result < 50) {
+            message = "You keep your subscriptions simple!";
+            //If your total is any number higher than 49, display You love supscriptions! I can relate.
+            } else {
+            message = "You love supscriptions! I can relate.";
+            }
+            document.getElementById("msg").innerHTML = message;
+
         }
         </script>
         <!--
