@@ -40,14 +40,61 @@
 
     <main>
 
-        <section>
+        <!--
+            GIT 417: Contract Form for Assignment 4
+            Author: Bruce Stine
+            Date: 4/8/2022
+        -->
 
-            <h2>Get In Touch!</h2>
+        <section class="form-container">
+            <h2>Let's Get In Touch</h2>
+            
+            <p>* = Required Fields</p>
 
-            <h3>Email:</h3>
-            <p><a href="mailto:contact@holdthebutter.com">contact@holdthebutter.com</a></p>
+            <form action="mailto:bstine@asu.edu" method="post" enctype="text/plain">
+                <ul>
+                    <li>
+                        <label for="firstname">First Name:</label>
+                        <input type="text" id="firstname" name="First Name">
+                    </li>
+                    <li>
+                        <label for="lastname">Last Name:</label>
+                        <input type="text" id="lastname" name="Last Name">
+                    </li>
+                    <li>
+                        <label for="email">*Email:</label>
+                        <input type="text" id="email" name="Email">
+                    </li>
+                    <input type="submit" onclick="myFunction()">
+                </ul>
+            </form>
+            
+            <p id="msg"></p>
 
         </section>
+
+        <script>
+            function myFunction() {
+                //Display the message inside the browser
+                const message = document.getElementById("msg");
+                message.innerHTML = "";
+                //Assigned m by let to hold the value of email
+                let m = document.getElementById("email").value;
+                //Try block to execute code and if email field is blank it throws the message
+                try { 
+                    if(m == "")  
+                    throw "Email is blank. Please fix and send again.";
+                }
+                //Catch alerts user with an error by alert window
+                catch(err) {
+                    message.innerHTML = err;
+                }
+            }
+
+            /* 
+                Completing the chapter 4 case project, I ran into a few errors mostly syntax errors. The most time-consuming one was when I accidentally typed inerHTML, instead of innerHTML this caused my script to not run the way it was intended and no message would display. I could not find the error from Visual Studio or the console. I did however fix and find the issue by changing (message.innerHTML = err;) to (alert(err);). With that, I knew the location of the issue. I had another syntax error that was not detected and caused no issue running when the ; was missing after (throw "Email is blank. Please fix and send again."). But Visual Studio did catch it and let me know.
+            */
+        </script>
 
         <footer>
 
