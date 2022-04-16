@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--  Enables older versions of Internet Explorer to work with HTML5 semantic elements -->
+    <script src="modernizr.min.js"></script>
+    <!--
+        GIT 417: Security Page for Assignment 5
+        Author: Bruce Stine
+        Date: 4/15/2022
+    -->
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hold the Butter - Home</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <meta name="author" content="Bruce Stine">
+</head>
+<body>
+    <header>
+        <h1>Hold the Butter</h1>
+
+        <nav>
+            <ul id="nav">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="favorites.html">Favorites</a>
+                </li>
+                <li>
+                    <a href="watchlist.html">Watchlist</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+                <li>
+                    <a href="security.html" class="active">Security</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section>
+
+            <h2>Practices for Using the Web Safety</h2>
+            
+            <p>Take a look at Google's new game "Interland" geared toward children to learn how to browse the web safely. by Michelle Woo at <a href="https://lifehacker.com/teach-your-kid-about-digital-safety-with-the-be-interne-1835951617" target="_blank">Lifehacker</a></p>
+
+            <p>Learn about the Top 10 internet safety rules to protect yourself, from social media to passwords. by <a href="https://usa.kaspersky.com/resource-center/preemptive-safety/top-10-internet-safety-rules-and-what-not-to-do-online" target="_blank">Kaspersky</a></p>
+
+            <p>Discover the best web browsing habbits that can be used on the go or at home. by The Office of the Chief Information Security Officer. <a href="https://ciso.uw.edu/education/risk-advisories/web-browsing/" target="_blank">University of Washiongton</a></p>
+
+        </section>
+
+        <section>
+
+            <h2>Education on Web Security</h2>
+
+            <p></p>Web security is immense in today's times. Some web users may not even know any security exists, some web users think everything is secure, and some people completely avoid the web because they think nothing is secure. Fortunately, web security does exist, and with today's technology, it's safer than it has ever been. Most of the work is done for us and built-in by the companies that develop the products, our web browsers. The developers that make the websites we use also have built-in security features. Such as firewalls, data backups, SSL certificates, and password control. Most of these features an average user may not notice but they are there working in your favor. </p>
+
+            <p>Even with all the technology features modern develops use, we still play a major part in our own security. All users should be careful of information shared on the web from credit card information to personal information, like addresses, birthdays, and social security numbers. </p>
+
+            <p>A great way for the average user to check if a website is secure is to look for HTTPS, the S at the end of HTTP stands for Secure. HTTPS means the website is encrypted and has that extra layer of security. Think of it this way, HTTP is like talking in a public place with a friend, everyone can hear what you're saying. Now, think of HTTPS as if you were talking in a made-up language only you and your friend understand. Everyone can still hear you but they won't be able to understand it. </p>
+
+            <p>Take a look below for an example of what information is obtainable right now from your computer.</p>
+
+            <h3>Example of Information Obtainable</h3>
+            <!--id for appName-->
+            <p id="name"></p>
+            <!--id for appVersion-->
+            <p id="ver"></p>
+            <!--id for onLine-->
+            <p id="line"></p>
+            <!--id for platform-->
+            <p id="plat"></p>
+            <p><b>Your screen information is...</b></p>
+            <!--id for pixelDepth-->
+            <p id="pix"></p>
+            <!--id for height-->
+            <p id="tall"></p>
+            <!--id for width-->
+            <p id="wide"></p>
+
+            
+        </section>
+
+        <script>
+            //Using innerHTML this grabs the users broswer name and displays it by the id name to the user
+            let webBrowser = navigator.appName;
+            document.getElementById("name").innerHTML = "<b>Your browser name is </b>" + webBrowser;
+            //Using innerHTML this grabs the users broswer version and displays it by the id ver to the user
+            let webVersion =  navigator.appVersion;
+            document.getElementById("ver").innerHTML = "<b>Your browser version is </b>" + webVersion;
+            //Using innerHTML this grabs the online status of users broswer name and displays it by the id line to the user
+            let online = navigator.onLine;
+            document.getElementById("line").innerHTML = "<b>Is your browser online? </b>" + online;
+            //Using innerHTML this grabs the users OS  and displays it by the id os to the user
+            let os = navigator.platform;
+            document.getElementById("plat").innerHTML = "<b>Your operating system is </b>" + os;
+            //Using innerHTML this grabs the users screen height and displays it by the id tall to the user
+            let height = screen.height;
+            document.getElementById("tall").innerHTML =  height + "px - height";
+            //Using innerHTML this grabs the users screen width and displays it by the id wide to the user
+            let width = screen.width;
+            document.getElementById("wide").innerHTML =  width + "px - width";
+            //Using innerHTML this grabs the users color resolution displayed by bits per pixel and displays it by the id pix to the user
+            let pixel = screen.pixelDepth;
+            document.getElementById("pix").innerHTML = pixel + " bits per pixel";
+        </script>
+
+        <footer>
+
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="favorites.html">Favorites</a>
+                </li>
+                <li>
+                    <a href="watchlist.html">Watchlist</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+                <li>
+                    <a href="security.html" class="active">Security</a>
+                </li>
+            </ul>
+
+            <small>Site for educational purposes only.</small>
+        
+        </footer>
+
+    </main>
+    
+</body>
+</html>
