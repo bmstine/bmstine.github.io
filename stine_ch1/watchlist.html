@@ -52,8 +52,65 @@
                 <li>The Gift Where to watch: Netflix</li>
                 <li>Deep Water Where to watch: Hulu</li>
             </ul>
+
+            <!--
+                GIT 417: Validation Form for Assignment 6
+                Author: Bruce Stine
+                Date: 4/23/2022
+            -->
+
+            <h3>Recommend a Movie</h3>
+            <p>*All fields below are required to be submitted to our interanl database.</p>
+
+            <form name="form">
+                <ul>
+                    <li>
+                        <!--This input will be used for the user to write the title of the movie-->
+                        <label for="title">Title:</label>
+                        <input type="text" id="title" name="title" oninput="update(this)" required>
+                    </li>
+                    <li>
+                        <!--This input will be used for the user to write a required review of the movie-->
+                        <label for="re">Write a short review about the movie?</label>
+                        <textarea type="text" id="re" rows="4" cols="80" name="re" oninput="update(this)" required></textarea>
+                    </li>
+                    <li>
+                        <!--This input will be used for the user to consent to authorizing us to use their submission-->
+                        <label for="acknowledge">Please click the checkbox below authorizing Hold The Butter to use your review</label>
+                        <input type="checkbox" id="acknowledge" name="acknowledge" value="yes" oninput="update(this)" required>
+                    </li>
+                    <!--Hypothetically upon Input the movie and info recommeneded will be submitted to our internal database-->
+                    <input type="submit" onclick="myFunction()">
+                </ul>
+            </form>
+
+            
             
         </section>
+
+        <script>
+            //Sets custom validation method and rules for form input title to Please enter a title here
+            document.form.title.setCustomValidity("Please enter a title here")
+            //Holds the funtion for the form oninput of update
+            function update (input){
+                if (input.value ==""){} //If title is empty the custom message from setCustomValidaity will be displayed upon input
+                input.setCustomValidity('');
+            }
+            //Sets custom validation method and rules for form input title to Don't be shy, tell me about it
+            document.form.re.setCustomValidity("Don't be shy, tell me about it")
+            //Holds the funtion for the form oninput of update
+            function update (input){
+                if (input.value ==""){} //If re is empty the custom message from setCustomValidaity will be displayed upon input
+                input.setCustomValidity('');
+            }
+            //Sets custom validation method and rules for form input title to This will need to be checked
+            document.form.acknowledge.setCustomValidity("This will need to be checked")
+            //Holds the funtion for the form oninput of update
+            function update (input){
+                if (input.value ==""){} //If acknowledge is empty the custom message from setCustomValidaity will be displayed upon input
+                input.setCustomValidity('');
+            }
+        </script>
 
         <footer>
 
