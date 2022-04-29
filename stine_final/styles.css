@@ -1,0 +1,43 @@
+/* Global Styles */
+
+html {
+    width: 1000px;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: rgb(227, 227, 227);
+}
+
+a {
+    color: rgb(193, 0, 0);
+    text-decoration: none;
+  }
+  
+input {
+    display: block;
+}
+
+ul {
+    list-style-type: none;
+}
+
+h1 {
+    color:rgb(119, 6, 6);
+}
+
+p {
+    color:rgb(0, 0, 0);
+}
+
+h2 {
+    font-size: 1.1em;
+    color: rgb(201, 2, 2);
+}
+
+.title {
+    color: rgb(61, 61, 61);
+    text-align: center;
+    font-size: 2.6em;
+}

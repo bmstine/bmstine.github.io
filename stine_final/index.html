@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--  Enables older versions of Internet Explorer to work with HTML5 semantic elements -->
+    <script src="modernizr.min.js"></script>
+    <!--
+        GIT 417: Final Project - JavaScript Tutorial
+        Author: Bruce Stine
+        Date: 4/28/2022
+    -->
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's Dip Into JavaScript - Home</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <meta name="author" content="Bruce Stine">
+    <!-- These 2 lines of code get the highlight js code library from a cloud content distribution network (CDN) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/javascript.min.js"></script>
+    <!-- In order to add html code examples this line needs to be in the head tag -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/xml.min.js"></script>
+    <!-- This line is needed for the default CSS style -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+    <!-- End of hightlight JS code library CDN declarations Everything after this is your design and tutorial-->
+</head>
+<body>
+    <header>
+        <h1>Let's Dip Into JavaScript</h1>
+
+        <nav>
+            <ul id="nav">
+                <li>
+                    <a href="index.html" class="active">Home</a>
+                </li>
+                <li>
+                    <a href="https://jsfiddle.net/9n5zasgt/17/" class="active">Working Example</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section>
+            <h1 class="title">Let’s Dip, Into Creating a Simple List To Add User Inputs with HTML and JavaScript.</h1>
+            
+            <h2>Why this tutorial is helpful.</h2>
+            <p>Completing this exercise will add to your knowledge of basic HTML and JavaScript. We will be using the HTML form tags and for JavaScript variables, parse, and document.getElementbyId. I hightly recommend working along step-by-step in your prefered editor. I prefer to use Visual Studio which can be downloaded <a href="https://visualstudio.microsoft.com/downloads/" target="_blank">here</a>.</p>
+
+            <h2>Basic HTML Page Setup</h2>
+            <p>First, let's start with the basic HTML page setup. Then we can move into building the HTML structure completely before we dip into JavaScript.</p>
+            <pre>
+                <code class="html">
+
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html lang=&quot;en&quot;&gt;
+                    &lt;head&gt;
+                        &lt;meta charset=&quot;UTF-8&quot;&gt;
+                        &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+                        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+                        &lt;title&gt;Document&lt;/title&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                        
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+
+                </code>
+            </pre>
+
+            <h2>Now Let's Build The List.</h2>
+            <p>We will build the list using an HTML form, in the body of the above code. The basic structure we will be using is shown below, with two input fields for the user. There are many input types for forms but right now we will only be using the input type of <b>text</b> in this demostration. You always want to use label tags to define input tags. They can be named whatever you please but to keep this simple we will stick to numberOne, and numberTwo. The value you see will hold the literal value for the user and is of course editable.</p>
+            <pre>
+                <code class="html">
+
+                    &lt;form&gt;
+
+                        &lt;label for=&quot;numberOne&quot;&gt;Number One:&lt;/label&gt;
+                        &lt;input type=&quot;text&quot; id=&quot;numberOne&quot; name=&quot;numberOne&quot; value="0"&gt;
+
+                        &lt;label for=&quot;numberTwo&quot;&gt;Number Two:&lt;/label&gt;
+                        &lt;input type=&quot;text&quot; id=&quot;numberTwo&quot; name=&quot;numberTwo&quot; value="0"&gt;
+
+                    &lt;/form&gt;
+                    
+                </code>
+            </pre>
+
+            <h2>Let's Build a Submit Button</h2>
+            <p>Now we will code the button in the <b>&lt;form&gt;</b> tags, right at the bottom. Take notice of the <b>onclick</b> portion. That will hold our JavaScript function we will be building very soon. Also notice now we are not using text as the input type but rather <b>button</b>.</p>
+            <pre>
+                <code class="html">
+
+                    &lt;input type=&quot;button&quot; name=&quot;btn&quot; value=&quot;Display Result&quot; onclick=&quot;add()&quot;&gt;
+                    
+                </code>
+            </pre>
+
+            <h2>Let's Show The Total</h2>
+            <p>Were you wondering how the user would see the total after they add the two numbers together? If so, nice catch, we will work on that now. For the final part of our HTML code we will be using more <b>label</b>> and <b>input</b> tags. This will be used for holding/displaying the total to the user and will go right above the button we just built with the name simply <b>total</b>.</p>
+            <pre>
+                <code class="html">
+
+                    &lt;label for=&quot;total&quot;&gt;Total:&lt;/label&gt;
+                    &lt;input type=&quot;text&quot; id=&quot;total&quot; name=&quot;numberTwo&quot; value=&quot;0&quot;&gt;
+                    
+                </code>
+            </pre>
+
+            <h2>Our Final HTML Code</h2>
+            <p>Here is how your final HTML code should look. If anything seems off please go over the above steps.</p>
+            <pre>
+                <code class="html">
+
+                    &lt;form&gt;
+                    &lt;label for=&quot;numberOne&quot;&gt;Number One:&lt;/label&gt;
+                    &lt;input type=&quot;text&quot; id=&quot;numberOne&quot; name=&quot;numberOne&quot; value=&quot;0&quot;&gt;
+
+                    &lt;label for=&quot;numberTwo&quot;&gt;Number Two:&lt;/label&gt;
+                    &lt;input type=&quot;text&quot; id=&quot;numberTwo&quot; name=&quot;numberTwo&quot; value=&quot;0&quot;&gt;
+
+                    &lt;label for=&quot;total&quot;&gt;Total:&lt;/label&gt;
+                    &lt;input type=&quot;text&quot; id=&quot;total&quot; name=&quot;numberTwo&quot; value=&quot;0&quot;&gt;
+
+                    &lt;input type=&quot;button&quot; name=&quot;btn&quot; value=&quot;Display Result&quot; onclick=&quot;add()&quot;&gt;
+                    &lt;/form&gt;
+                    
+                </code>
+            </pre>
+            
+        </section>
+
+        <!--Start of JavaScript Section-->
+
+        <section>
+
+            <h2>Now Lets Make Our Form Work</h2>
+            <p>Were going to make our form work with... you guessed it! JavaScript! Remember seeing <b>onclick</b>, we will code the function so that when the user clicks it the numbers entered are added together. Start with adding &lt;script&gt; tags below the &lt;form&gt; tags. This is where we will hold our JavaScript code. We can make an external file and link it but for this tutorial everything is kept simple. See below for the tags.</p>
+            <pre>
+                <code class="javascript">
+
+                    &lt;script type=&quot;text/javascript&quot;&gt;
+                    &lt;/script&gt;
+                    
+                </code>
+            </pre>
+
+            <h2>Inside The Script Tags</h2>
+            <p>Inside our script tags we are going to add our function and call it <b>add</b>.</p>
+            <p>Inisde our function tags were going to create some variables with <b>var</b> these variables will hold the user entered total for numberOne and numberTwo. We will continue coding the variable using <b>parseInt</b> to convert the first argument followed by <b>document.getElementById</b> to quite literally get the element by its id such as numberOne. We will have to name our varibale as well so lets keep it simple with numone and numtwo.</p>
+            <pre>
+                <code class="javascript">
+
+                    function add() {
+                        var numone = parseInt(document.getElementById(&quot;numberOne&quot;).value);
+                        var numtwo = parseInt(document.getElementById(&quot;numberTwo&quot;).value);
+                    
+                </code>
+            </pre>
+
+            <h2>The "Result"</h2>
+            <p>We also need a third variable which will of course be named, result. This will go below the above two variables in our &lt;script&gt; tags. The result will add the two variables above <b>numone</b> and <b>numtwo</b> and hold the value to display to the user.</p>
+            <p>Below our result variable we are going to use <b>document.getElementById</b> again to show the total value to the user.</p>
+            <pre>
+                <code class="javascript">
+
+                    var result = numone + numtwo;
+                    document.getElementById(&quot;total&quot;).value = result;
+                    
+                </code>
+            </pre>
+
+            <h2>Our Final JavaScript Code</h2>
+            <p>Here is how your final JavaScript code should look. If anything seems off please go over the above steps.</p>
+            <pre>
+                <code class="javascript">
+
+                    function add() {
+                        var numone = parseInt(document.getElementById(&quot;numberOne&quot;).value);
+                        var numtwo = parseInt(document.getElementById(&quot;numberTwo&quot;).value);
+                        
+                        var result = numone + numtwo;
+                        document.getElementById(&quot;total&quot;).value = result;
+                        }
+                        
+                    
+                </code>
+            </pre>
+            
+
+        </section>
+
+        <section>
+
+            <h2>Now Let's See The HTML and JavaScript Code Together</h2>
+            <p>If you followed along exactly with this tutorial the below code should be identical to what you coded. I really hope this tutorial helped you learn some of the basics of JavaScript and HTML.</p>
+            <p>Don't forget to check out the completed project at the link in navigation bar, Working Example.</p>
+            <pre>
+                <code class="html">
+
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html lang=&quot;en&quot;&gt;
+                    &lt;head&gt;
+                        &lt;meta charset=&quot;UTF-8&quot;&gt;
+                        &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+                        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+                        &lt;title&gt;Document&lt;/title&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                        &lt;form&gt;
+                            &lt;label for=&quot;numberOne&quot;&gt;Number One:&lt;/label&gt;
+                            &lt;input type=&quot;text&quot; id=&quot;numberOne&quot; name=&quot;numberOne&quot; value=&quot;0&quot;&gt;
+                            
+                            &lt;label for=&quot;numberTwo&quot;&gt;Number Two:&lt;/label&gt;
+                            &lt;input type=&quot;text&quot; id=&quot;numberTwo&quot; name=&quot;numberTwo&quot; value=&quot;0&quot;&gt;
+                            
+                            &lt;label for=&quot;total&quot;&gt;Total:&lt;/label&gt;
+                            &lt;input type=&quot;text&quot; id=&quot;total&quot; name=&quot;numberTwo&quot; value=&quot;0&quot;&gt;
+                            
+                            &lt;input type=&quot;button&quot; name=&quot;btn&quot; value=&quot;Display Result&quot; onclick=&quot;add()&quot;&gt;
+                            &lt;/form&gt;
+
+                        &lt;script type=&quot;text/javascript&quot;&gt;
+                            function add() {
+                            var numone = parseInt(document.getElementById(&quot;numberOne&quot;).value);
+                            var numtwo = parseInt(document.getElementById(&quot;numberTwo&quot;).value);
+
+                            var result = numone + numtwo;
+                            document.getElementById(&quot;total&quot;).value = result;
+                            }
+                        &lt;/script&gt;
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                    
+                </code>
+            </pre>
+
+        </section>
+
+        <footer>
+
+            <ul>
+                <li>
+                    <a href="index.html" class="active">Home</a>
+                </li>
+                <li>
+                    <a href="https://jsfiddle.net/9n5zasgt/17/" class="active">Working Example</a>
+                </li>
+            </ul>
+
+            <small>Site for educational purposes only.</small>
+        
+        </footer>
+
+    </main>
+    <!-- This next line is required to make the code light-up with syntax highlighting -->
+    <script>hljs.highlightAll();</script>  
+</body>
+</html>
