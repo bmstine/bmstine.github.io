@@ -42,6 +42,8 @@
 
     <main>
 
+        <!--Start of HTML Section-->
+
         <section>
             <h1 class="title">Let’s Dip, Into Creating a Simple List To Add User Inputs with HTML and JavaScript.</h1>
             
@@ -50,6 +52,7 @@
 
             <h2>Basic HTML Page Setup</h2>
             <p>First, let's start with the basic HTML page setup. Then we can move into building the HTML structure completely before we dip into JavaScript.</p>
+            <!--Basic HTML page structure-->
             <pre>
                 <code class="html">
 
@@ -71,6 +74,7 @@
 
             <h2>Now Let's Build The List.</h2>
             <p>We will build the list using an HTML form, in the body of the above code. The basic structure we will be using is shown below, with two input fields for the user. There are many input types for forms but right now we will only be using the input type of <b>text</b> in this demostration. You always want to use label tags to define input tags. They can be named whatever you please but to keep this simple we will stick to numberOne, and numberTwo. The value you see will hold the literal value for the user and is of course editable.</p>
+            <!--Form, input and label tags to create the texboxes for user input-->
             <pre>
                 <code class="html">
 
@@ -89,6 +93,7 @@
 
             <h2>Let's Build a Submit Button</h2>
             <p>Now we will code the button in the <b>&lt;form&gt;</b> tags, right at the bottom. Take notice of the <b>onclick</b> portion. That will hold our JavaScript function we will be building very soon. Also notice now we are not using text as the input type but rather <b>button</b>.</p>
+            <!--Input button for the form that will trigger the add function when clicked-->
             <pre>
                 <code class="html">
 
@@ -99,6 +104,7 @@
 
             <h2>Let's Show The Total</h2>
             <p>Were you wondering how the user would see the total after they add the two numbers together? If so, nice catch, we will work on that now. For the final part of our HTML code we will be using more <b>label</b>> and <b>input</b> tags. This will be used for holding/displaying the total to the user and will go right above the button we just built with the name simply <b>total</b>.</p>
+            <!--Input to hold the total-->
             <pre>
                 <code class="html">
 
@@ -110,6 +116,7 @@
 
             <h2>Our Final HTML Code</h2>
             <p>Here is how your final HTML code should look. If anything seems off please go over the above steps.</p>
+            <!--Full HTML code-->
             <pre>
                 <code class="html">
 
@@ -137,6 +144,7 @@
 
             <h2>Now Lets Make Our Form Work</h2>
             <p>Were going to make our form work with... you guessed it! JavaScript! Remember seeing <b>onclick</b>, we will code the function so that when the user clicks it the numbers entered are added together. Start with adding &lt;script&gt; tags below the &lt;form&gt; tags. This is where we will hold our JavaScript code. We can make an external file and link it but for this tutorial everything is kept simple. See below for the tags.</p>
+            <!--Script tags-->
             <pre>
                 <code class="javascript">
 
@@ -149,6 +157,7 @@
             <h2>Inside The Script Tags</h2>
             <p>Inside our script tags we are going to add our function and call it <b>add</b>.</p>
             <p>Inisde our function tags were going to create some variables with <b>var</b> these variables will hold the user entered total for numberOne and numberTwo. We will continue coding the variable using <b>parseInt</b> to convert the first argument followed by <b>document.getElementById</b> to quite literally get the element by its id such as numberOne. We will have to name our varibale as well so lets keep it simple with numone and numtwo.</p>
+            <!--Our add function with two variables using getElementByID for numberOne and numberTwo-->
             <pre>
                 <code class="javascript">
 
@@ -162,6 +171,7 @@
             <h2>The "Result"</h2>
             <p>We also need a third variable which will of course be named, result. This will go below the above two variables in our &lt;script&gt; tags. The result will add the two variables above <b>numone</b> and <b>numtwo</b> and hold the value to display to the user.</p>
             <p>Below our result variable we are going to use <b>document.getElementById</b> again to show the total value to the user.</p>
+            <!--Variable to hold the result of the two variables numone and numtwo added together-->
             <pre>
                 <code class="javascript">
 
@@ -173,6 +183,7 @@
 
             <h2>Our Final JavaScript Code</h2>
             <p>Here is how your final JavaScript code should look. If anything seems off please go over the above steps.</p>
+            <!--Final JavaScript code-->
             <pre>
                 <code class="javascript">
 
@@ -196,6 +207,7 @@
             <h2>Now Let's See The HTML and JavaScript Code Together</h2>
             <p>If you followed along exactly with this tutorial the below code should be identical to what you coded. I really hope this tutorial helped you learn some of the basics of JavaScript and HTML.</p>
             <p>Don't forget to check out the completed project at the link in navigation bar, Working Example.</p>
+            <!--Final Completed Code-->
             <pre>
                 <code class="html">
 
