@@ -1,0 +1,115 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container */
+.container {
+    max-width: 1280px; /* Set the maximum width of the container */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Add some padding */
+}
+
+/* Header and Navigation Styles */
+header {
+    background-color: #f8f8f8;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+nav {
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Main Content Styles */
+main {
+    /* Styles for the main content area */
+}
+
+/* Tabs Styles */
+#tabs {
+    border: 1px solid #ddd;
+    background-color: #fff;
+    padding: 10px;
+}
+
+#tabs ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    border-bottom: 1px solid #ddd;
+}
+
+#tabs ul li {
+    margin-right: 5px;
+}
+
+#tabs ul li a {
+    display: block;
+    padding: 10px 20px;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-bottom: none;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+#tabs ul li a:hover,
+#tabs ul li a:focus {
+    background-color: #e9e9e9;
+}
+
+#tabs div {
+    padding: 20px;
+    border-top: none;
+}
+
+/* Add more specific styles as needed */
+
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+/* Footer Weather Widget Styles */
+#weather-widget {
+    text-align: center;
+    color: #fff; /* Assuming a dark footer background */
+    margin-top: 20px;
+}
+
+#weather-widget h3 {
+    margin-bottom: 10px;
+}
+
+#weather-widget div {
+    font-size: 1.1em;
+    margin: 5px 0;
+}
+
