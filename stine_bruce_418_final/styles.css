@@ -1,0 +1,246 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px 100px 20px 100px;
+    box-sizing: border-box;
+    background: url('images/plywoodwallpaper.jpg') no-repeat center center fixed; /*source: https://unsplash.com/photos/brown-soil-CGlNWrTU5oo */
+    background-size: cover;
+    
+}
+
+/* Dark overlay on the body background */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(135, 85, 56, 0.8);
+    z-index: 1;
+}
+
+/* Add above the overlay */
+.container, header, footer, body {
+    position: relative;
+    z-index: 2;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0px;
+    background-color: #191e2b;
+}
+
+/* start of nav/header styles */
+header {
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center; 
+    background: url('images/headerbackground.png') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    width: auto;
+    height: 10%;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 40%;
+    height: auto;
+}
+
+nav, #logo {
+    position: relative;
+    z-index: 2;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo {
+    width: 30%;
+    height: auto;
+    padding-top: 20px;
+}
+/* end of nav/header styles */
+
+/* start of main content styles */
+.hideh1 {
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.product-list a {
+    color: #00bc14;
+    text-decoration: none; 
+}
+
+.product-list a:hover, .product-list a:focus {
+    text-decoration: underline;
+}
+
+.festool-retailers table {
+    width: 100%; 
+    border-collapse: collapse; 
+    background-color: #191e2b;
+    color: white;
+}
+
+.festool-retailers th, .festool-retailers td {
+    border: 1px solid #ddd; 
+    padding: 8px; 
+    text-align: left; 
+}
+
+.festool-retailers th {
+    background-color: #243447;
+}
+
+.festool-retailers a {
+    color: #00bc14; 
+    text-decoration: none; 
+}
+
+.festool-retailers a:hover, .festool-retailers a:focus {
+    text-decoration: underline; 
+}
+
+/* slick slider styles */
+.slider {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    height: 300px;
+}
+
+.slick-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.slick-slide img {
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+    min-width: 100%;
+}
+
+/* hide the controls */
+.slick-prev, .slick-next, .slick-dots {
+    display: none !important;
+}
+
+/* tab styles */
+#tabs {
+    background-color: #191e2b;
+    padding: 10px;
+    color: white;
+}
+
+#tabs ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    border-bottom: 3px solid #00bc14;
+}
+
+/* Space between tab items */
+#tabs ul li {
+    margin-right: 5px;
+}
+
+#tabs ul li a {
+    display: block;
+    padding: 10px 20px;
+    background-color: #bec6cb;
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+}
+
+#tabs ul li a:hover, #tabs ul li a:focus, #tabs ul li.ui-tabs-active a {
+    background-color: #00bc14;
+}
+
+#tabs div {
+    padding: 5px 40px 5px 40px;
+}
+
+
+/* featured video styles */
+.video-section {
+    margin: 0 auto;
+    text-align: center;
+    padding: 80px;
+    margin-bottom: 20px;
+}
+
+.video-section h2 {
+    color: #FFFFFF;
+    margin-bottom: 15px;
+}
+
+.featured-video {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+    height: 0;
+}
+
+.featured-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video-thumbnails img {
+    width: 120px;
+    margin: 5px;
+    cursor: pointer;
+}
+/* end of main content styles */
+
+/* start of footer styles */
+footer {
+    background-color: #191e2b;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+/* footer weather style */
+#weather-widget {
+    text-align: right;
+    color: #FFFFFF;
+    margin: 10px 40px 10px 10px;
+}
+
+#weather-widget h3 {
+    margin-bottom: 10px;
+}
+
+/* Margin around the weather info */
+#weather-widget div {
+    margin: 8px;
+}
+/* end of footer styles */
